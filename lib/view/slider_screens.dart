@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foody_buddy/view/create_account.dart';
+import 'package:foody_buddy/view/login_screen.dart';
 import 'package:foody_buddy/widgets/slider_widget.dart';
 
 class SliderScreen extends StatefulWidget {
@@ -78,7 +78,7 @@ class _SliderScreenState extends State<SliderScreen> {
                       if (currentIndex == sliderContents.length - 1) {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => CreateAccount(),
+                            builder: (context) => LoginsScreen(),
                           ),
                         );
                       }

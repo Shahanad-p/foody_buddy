@@ -36,12 +36,13 @@ class _CartState extends State<Cart> {
         ),
         actions: [
           ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                'assets/28c4a35c-3524-437c-b610-4e5d6acab049.jpg',
-                height: 50,
-                width: 50,
-              ))
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              'assets/28c4a35c-3524-437c-b610-4e5d6acab049.jpg',
+              height: 50,
+              width: 50,
+            ),
+          )
         ],
       ),
     );

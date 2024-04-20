@@ -8,12 +8,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 1,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: Icon(
           Icons.location_on,
           color: Colors.black,
@@ -43,6 +44,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 50,
               ))
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Column(
+          children: [
+            TextFormField(
+              controller: searchController,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.8),
+                      borderSide: BorderSide(color: Colors.white)),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.8),
+                      borderSide: BorderSide(color: Colors.white)),
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  hintText: 'Search',
+                  hintStyle: TextStyle(color: Colors.grey[500])),
+            ),
+          ],
+        ),
       ),
     );
   }

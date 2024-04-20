@@ -13,8 +13,8 @@ class MyImagePath extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: 40.8,
-            width: 40.8,
+            height: 36.8,
+            width: 36.8,
             child: Image.asset(imagePath),
           ),
         ],

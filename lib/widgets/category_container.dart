@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyContainer extends StatelessWidget {
+class MyCategoryContainer extends StatelessWidget {
   final String image;
   final String text;
 
-  const MyContainer({Key? key, required this.image, required this.text})
+  const MyCategoryContainer({Key? key, required this.image, required this.text})
       : super(key: key);
 
   @override

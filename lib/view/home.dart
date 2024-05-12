@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foody_buddy/widgets/container.dart';
+import 'package:foody_buddy/widgets/category_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -70,39 +70,57 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 12),
               SizedBox(
                   height: 110,
-                  width: double.infinity,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          MyContainer(image: 'assets/drink.png', text: 'Drink'),
+                          MyCategoryContainer(
+                              image: 'assets/drink.png', text: 'Drink'),
                           SizedBox(width: 12),
-                          MyContainer(
+                          MyCategoryContainer(
                               image: 'assets/piece-of-cake.png',
                               text: 'Dessert'),
                           SizedBox(width: 12),
-                          MyContainer(
+                          MyCategoryContainer(
                               image: 'assets/snack.png', text: 'Snacks'),
                           SizedBox(width: 12),
-                          MyContainer(image: 'assets/soup.png', text: 'Soup'),
+                          MyCategoryContainer(
+                              image: 'assets/soup.png', text: 'Soup'),
                           SizedBox(width: 12),
-                          MyContainer(image: 'assets/iftar.png', text: 'Meal'),
+                          MyCategoryContainer(
+                              image: 'assets/iftar.png', text: 'Meal'),
                           SizedBox(width: 12),
                         ],
                       ),
                     ],
                   )),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'Food menu',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Food menu',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
+                  Text(
+                    'View all',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              SizedBox(height: 16),
+              Container(
+                height: 280,
+                color: Colors.amber,
+                child: GridView(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 10)),
+                        
               ),
             ],
           ),

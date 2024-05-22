@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/controller/bottom_provider.dart';
 import 'package:foody_buddy/view/slider_screens.dart';
-import 'package:foody_buddy/widgets/bottom_nav.dart';
 import 'package:provider/provider.dart';
 
 void main() {

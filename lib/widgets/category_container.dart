@@ -12,8 +12,8 @@ class MyCategoryContainer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 75,
-          width: 75,
+          height: 70,
+          width: 70,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             border: Border.all(

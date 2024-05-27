@@ -67,35 +67,35 @@ class _HomeScreenState extends State<HomeScreen> {
                     hintText: 'Search',
                     hintStyle: TextStyle(color: Colors.grey[500])),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 15),
               SizedBox(
-                  height: 110,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          MyCategoryContainer(
-                              image: 'assets/drink.png', text: 'Drink'),
-                          SizedBox(width: 12),
-                          MyCategoryContainer(
-                              image: 'assets/piece-of-cake.png',
-                              text: 'Dessert'),
-                          SizedBox(width: 12),
-                          MyCategoryContainer(
-                              image: 'assets/snack.png', text: 'Snacks'),
-                          SizedBox(width: 12),
-                          MyCategoryContainer(
-                              image: 'assets/soup.png', text: 'Soup'),
-                          SizedBox(width: 12),
-                          MyCategoryContainer(
-                              image: 'assets/iftar.png', text: 'Meal'),
-                          SizedBox(width: 12),
-                        ],
-                      ),
-                    ],
-                  )),
+                height: 110,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MyCategoryContainer(
+                            image: 'assets/drink.png', text: 'Drink'),
+                        SizedBox(width: 12),
+                        MyCategoryContainer(
+                            image: 'assets/piece-of-cake.png', text: 'Dessert'),
+                        SizedBox(width: 12),
+                        MyCategoryContainer(
+                            image: 'assets/snack.png', text: 'Snacks'),
+                        SizedBox(width: 12),
+                        MyCategoryContainer(
+                            image: 'assets/soup.png', text: 'Soup'),
+                        SizedBox(width: 12),
+                        MyCategoryContainer(
+                            image: 'assets/iftar.png', text: 'Meal'),
+                        SizedBox(width: 12),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,18 +110,49 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'View all',
                     style: TextStyle(fontWeight: FontWeight.bold),
-                  )
+                  ),
                 ],
               ),
               SizedBox(height: 16),
               Container(
                 height: 280,
-                color: Colors.amber,
-                child: GridView(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 10)),
-                        
-              ),
+                // color: Colors.amber,
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  itemCount: 30,
+                  itemBuilder: (context, index) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                          color: Colors.blue,
+                          child: Stack(
+                            children: [
+                              Positioned.fill(
+                                child: Image.asset(
+                                  'assets/j6i5_gaq9_230518.jpg',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Positioned(
+                                left: 10,
+                                top: 8,
+                                child: Text(
+                                  'Burger',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 17),
+                                ),
+                              ),
+                            ],
+                          )),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),

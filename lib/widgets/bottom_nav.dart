@@ -6,8 +6,8 @@ import 'package:foody_buddy/view/home.dart';
 import 'package:foody_buddy/view/profile.dart';
 import 'package:provider/provider.dart';
 
-class BottomBar extends StatelessWidget {
-  const BottomBar({super.key});
+class BottomBarWidget extends StatelessWidget {
+  const BottomBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

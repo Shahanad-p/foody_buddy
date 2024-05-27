@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/widgets/category_container.dart';
+import 'package:foody_buddy/widgets/food_menu_sizedbox.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,12 +39,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                'assets/28c4a35c-3524-437c-b610-4e5d6acab049.jpg',
-                height: 50,
-                width: 50,
-              ))
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              'assets/28c4a35c-3524-437c-b610-4e5d6acab049.jpg',
+              height: 50,
+              width: 50,
+            ),
+          )
         ],
       ),
       body: Padding(
@@ -113,46 +115,36 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+              SizedBox(height: 13),
+              FoodMenuSizedBox(),
+              SizedBox(height: 13),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Most popular',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(height: 16),
               Container(
-                height: 280,
-                // color: Colors.amber,
-                child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                  ),
-                  itemCount: 30,
-                  itemBuilder: (context, index) {
-                    return ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                          color: Colors.blue,
-                          child: Stack(
-                            children: [
-                              Positioned.fill(
-                                child: Image.asset(
-                                  'assets/j6i5_gaq9_230518.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Positioned(
-                                left: 10,
-                                top: 8,
-                                child: Text(
-                                  'Burger',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 17),
-                                ),
-                              ),
-                            ],
-                          )),
-                    );
-                  },
+                height: 150,
+                width: 360,
+                color: const Color.fromARGB(255, 222, 213, 213),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/delicious-food-black-board.jpg',
+                      height: 100,
+                      
+                    ),
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         ),

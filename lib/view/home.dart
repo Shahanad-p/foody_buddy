@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/widgets/category_container.dart';
 import 'package:foody_buddy/widgets/food_menu_sizedbox.dart';
+import 'package:foody_buddy/widgets/most_popular_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text('Location', style: TextStyle(color: Colors.black)),
             Row(
               children: [
-                Text('Kannur,kerala,india',
+                Text('Kannur, Kerala, India',
                     style: TextStyle(color: Colors.black, fontSize: 16)),
                 Icon(
                   Icons.arrow_drop_down,
@@ -58,16 +60,19 @@ class _HomeScreenState extends State<HomeScreen> {
               TextFormField(
                 controller: searchController,
                 decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.8),
-                        borderSide: BorderSide(color: Colors.white)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.8),
-                        borderSide: BorderSide(color: Colors.white)),
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                    hintText: 'Search',
-                    hintStyle: TextStyle(color: Colors.grey[500])),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.8),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.8),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  hintText: 'Search',
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
               ),
               SizedBox(height: 15),
               SizedBox(
@@ -105,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'Food menu',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -124,26 +129,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'Most popular',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
               SizedBox(height: 16),
-              Container(
-                height: 150,
-                width: 360,
-                color: const Color.fromARGB(255, 222, 213, 213),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      'assets/delicious-food-black-board.jpg',
-                      height: 100,
-                      
+              Column(
+                children: List.generate(10, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: MostPopularContainerWidget(
+                      index: index,
                     ),
-                  ],
-                ),
+                  );
+                }),
               ),
             ],
           ),

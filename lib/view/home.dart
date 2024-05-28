@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/widgets/category_container.dart';
-import 'package:foody_buddy/widgets/food_menu_sizedbox.dart';
+import 'package:foody_buddy/widgets/food_menu_container.dart';
 import 'package:foody_buddy/widgets/most_popular_container.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -121,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               SizedBox(height: 13),
-              FoodMenuSizedBox(),
+              FoodMenuContainer(),
               SizedBox(height: 13),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

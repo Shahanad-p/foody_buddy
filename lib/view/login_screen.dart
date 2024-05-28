@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/view/mobile_verification.dart';
 import 'package:foody_buddy/view/register_screen.dart';
-import 'package:foody_buddy/widgets/button.dart';
+import 'package:foody_buddy/view/button.dart';
 import 'package:foody_buddy/widgets/image_path.dart';
 import 'package:foody_buddy/widgets/textfields.dart';
 

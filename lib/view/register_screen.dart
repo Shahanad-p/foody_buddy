@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foody_buddy/widgets/button.dart';
+import 'package:foody_buddy/view/button.dart';
 import 'package:foody_buddy/widgets/textfields.dart';
 
 class RegisterScreen extends StatefulWidget {

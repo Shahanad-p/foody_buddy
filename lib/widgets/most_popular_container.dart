@@ -40,7 +40,7 @@ class MostPopularContainerWidget extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Double Patty Burger ${index + 1}',
+                    'Double Patty Burger ',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   SizedBox(width: 10),
@@ -61,7 +61,7 @@ class MostPopularContainerWidget extends StatelessWidget {
                     '⭐⭐⭐⭐⭐ 4.7',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
-                  SizedBox(width: 40),
+                  SizedBox(width: 50),
                   Icon(Icons.add_box)
                 ],
               ),

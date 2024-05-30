@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foody_buddy/view/otp_screen.dart';
-import 'package:foody_buddy/view/button.dart';
+import 'package:foody_buddy/widgets/button.dart';
 
 class MobileVerification extends StatefulWidget {
   const MobileVerification({super.key});

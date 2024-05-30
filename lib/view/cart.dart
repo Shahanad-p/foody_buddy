@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foody_buddy/widgets/button.dart';
+import 'package:foody_buddy/widgets/cart_container.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -44,6 +46,33 @@ class _CartState extends State<Cart> {
             ),
           )
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(18),
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Row(children: [
+                Text('Your cart',
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ]),
+              SizedBox(height: 15),
+              Column(
+                children: List.generate(4, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: CartContainerWidget(index: index),
+                  );
+                }),
+              ),
+              SizedBox(height: 10),
+              MyButtonWidget(onTap: () {}, text: 'Place Order')
+            ],
+          ),
+        ),
       ),
     );
   }

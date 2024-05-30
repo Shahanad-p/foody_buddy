@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.all(18),
         child: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
@@ -97,52 +97,32 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(width: 12),
                         MyCategoryContainer(
                             image: 'assets/iftar.png', text: 'Meal'),
-                        SizedBox(width: 12),
+                        SizedBox(width: 12)
                       ],
                     ),
                   ],
                 ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Food menu',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'View all',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text('Food menu',
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                Text('View all', style: TextStyle(fontWeight: FontWeight.bold)),
+              ]),
               SizedBox(height: 13),
               FoodMenuContainer(),
               SizedBox(height: 13),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Most popular',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Text('Most popular',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
+              ]),
               SizedBox(height: 16),
               Column(
                 children: List.generate(10, (index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
-                    child: MostPopularContainerWidget(
-                      index: index,
-                    ),
+                    child: MostPopularContainerWidget(index: index),
                   );
                 }),
               ),

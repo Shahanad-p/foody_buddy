@@ -75,7 +75,9 @@ class _ProfileState extends State<Profile> {
                   style: TextStyle(fontWeight: FontWeight.bold)),
               Row(
                 children: [
-                  Text(''),
+                  Text('bhbhfvbjhcbhjc'),
+                  Text('bhbhfvbjhcbhjcbhbsdc'),
+                  Text('bhbhfvbjhcbhjcjhbchjsdc'),
                 ],
               )
             ],

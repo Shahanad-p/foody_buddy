@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:foody_buddy/widgets/about_us_screen.dart';
+import 'package:foody_buddy/widgets/address_screen.dart';
 import 'package:foody_buddy/widgets/button.dart';
-import 'package:foody_buddy/widgets/order_review_screen.dart';
+import 'package:foody_buddy/widgets/my_order_screen.dart';
+import 'package:foody_buddy/widgets/notification_screen.dart';
+import 'package:foody_buddy/widgets/personal_info_screen.dart';
+import 'package:foody_buddy/widgets/customers_reviews_screen.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -81,20 +86,42 @@ class _ProfileState extends State<Profile> {
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => OrderReviewWidget())),
+                        builder: (context) => CustomersReviewsWidget())),
                     child: MyTextWidget(
-                        text1: 'Order Review', icon1: Icons.arrow_forward_ios),
+                        text1: 'Customers Reviews',
+                        icon1: Icons.arrow_forward_ios),
                   ),
-                  MyTextWidget(
-                      text1: 'Address', icon1: Icons.arrow_forward_ios),
-                  MyTextWidget(text1: 'Order', icon1: Icons.arrow_forward_ios),
-                  MyTextWidget(
-                      text1: 'Personal Information',
-                      icon1: Icons.arrow_forward_ios),
-                  MyTextWidget(
-                      text1: 'Notification', icon1: Icons.arrow_forward_ios),
-                  MyTextWidget(
-                      text1: 'About Us', icon1: Icons.arrow_forward_ios),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AddressWidget())),
+                    child: MyTextWidget(
+                        text1: 'Address', icon1: Icons.arrow_forward_ios),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => MyOrderWidget())),
+                    child: MyTextWidget(
+                        text1: 'My Order', icon1: Icons.arrow_forward_ios),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => PersonalInfoWidget())),
+                    child: MyTextWidget(
+                        text1: 'Personal Information',
+                        icon1: Icons.arrow_forward_ios),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => NotificationWidget())),
+                    child: MyTextWidget(
+                        text1: 'Notification', icon1: Icons.arrow_forward_ios),
+                  ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AboutUsWidget())),
+                    child: MyTextWidget(
+                        text1: 'About Us', icon1: Icons.arrow_forward_ios),
+                  ),
                   MyTextWidget(
                       text1: 'Contact Us', icon1: Icons.arrow_forward_ios),
                 ],

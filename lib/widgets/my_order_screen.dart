@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class OrderReviewWidget extends StatelessWidget {
-  const OrderReviewWidget({super.key});
+class MyOrderWidget extends StatelessWidget {
+  const MyOrderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Order Review',
+          'My Order',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,

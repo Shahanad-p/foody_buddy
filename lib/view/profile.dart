@@ -6,6 +6,7 @@ import 'package:foody_buddy/widgets/my_order_screen.dart';
 import 'package:foody_buddy/widgets/notification_screen.dart';
 import 'package:foody_buddy/widgets/personal_info_screen.dart';
 import 'package:foody_buddy/widgets/customers_reviews_screen.dart';
+import 'package:foody_buddy/widgets/terms_and_conditions.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -122,11 +123,18 @@ class _ProfileState extends State<Profile> {
                     child: MyTextWidget(
                         text1: 'About Us', icon1: Icons.arrow_forward_ios),
                   ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TermsAndConditions())),
+                    child: MyTextWidget(
+                        text1: 'Terms & Conditions',
+                        icon1: Icons.arrow_forward_ios),
+                  ),
                   MyTextWidget(
                       text1: 'Contact Us', icon1: Icons.arrow_forward_ios),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               MyButtonWidget(onTap: () {}, text: 'Sign Out')
             ],
           ),
@@ -151,7 +159,7 @@ class MyTextWidget extends StatelessWidget {
           border: Border.all(
             color: Color.fromARGB(255, 207, 200, 200),
           )),
-      height: 50,
+      height: 45,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text(
           text1,

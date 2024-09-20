@@ -7,6 +7,7 @@ import 'package:foody_buddy/widgets/notification_screen.dart';
 import 'package:foody_buddy/widgets/personal_info_screen.dart';
 import 'package:foody_buddy/widgets/customers_reviews_screen.dart';
 import 'package:foody_buddy/widgets/terms_and_conditions.dart';
+import 'package:latlong2/latlong.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -99,10 +100,30 @@ class _ProfileState extends State<Profile> {
                         text1: 'Address', icon1: Icons.arrow_forward_ios),
                   ),
                   GestureDetector(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => MyOrderWidget())),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => OrderDetailWidget(
+                          username: 'John Doe', // Replace with actual username
+                          contactNumber:
+                              '+1234567890', // Replace with actual contact number
+                          orderDate:
+                              DateTime.now(), // Replace with actual order date
+                          orderItems: [
+                            {'name': 'Burger', 'quantity': 1, 'price': 5.99},
+                            {'name': 'Pizza', 'quantity': 2, 'price': 8.99},
+                            {'name': 'Soda', 'quantity': 3, 'price': 1.50},
+                          ], // Replace with actual order items
+                          location: LatLng(37.7749,
+                              -122.4194), // Replace with actual coordinates
+                          trackingId:
+                              'ABC123XYZ', // Replace with actual tracking ID
+                        ),
+                      ),
+                    ),
                     child: MyTextWidget(
-                        text1: 'My Order', icon1: Icons.arrow_forward_ios),
+                      text1: 'My Order',
+                      icon1: Icons.arrow_forward_ios,
+                    ),
                   ),
                   GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -112,10 +133,26 @@ class _ProfileState extends State<Profile> {
                         icon1: Icons.arrow_forward_ios),
                   ),
                   GestureDetector(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => NotificationWidget())),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => NotificationWidget(
+                            username: 'John Doe',
+                            contactNumber: '123-456-7890',
+                            orderDate: DateTime.now(),
+                            orderItems: [
+                              {'name': 'Burger', 'quantity': 1, 'price': 5.99},
+                              {'name': 'Pizza', 'quantity': 2, 'price': 8.99},
+                              {'name': 'Soda', 'quantity': 3, 'price': 1.50},
+                            ],
+                          ),
+                        ),
+                      );
+                    },
                     child: MyTextWidget(
-                        text1: 'Notification', icon1: Icons.arrow_forward_ios),
+                      text1: 'Notification',
+                      icon1: Icons.arrow_forward_ios,
+                    ),
                   ),
                   GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(

@@ -30,7 +30,7 @@ class BottomBarWidget extends StatelessWidget {
         currentIndex: provider.currentIndex,
         onTap: (index) => provider.buildBotoomBar(index),
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.orange,
+        selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
         items: [

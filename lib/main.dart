@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foody_buddy/controller/address_provider.dart';
 import 'package:foody_buddy/controller/bottom_provider.dart';
 import 'package:foody_buddy/widgets/bottom_nav.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => BottomProvider())
+        ChangeNotifierProvider(create: (context) => BottomProvider()),
+        ChangeNotifierProvider(create: (context) => AddressProvider())
       ],
       child: MaterialApp(
         home: BottomBarWidget(),
